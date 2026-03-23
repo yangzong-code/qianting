@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>潜艇AI · 会员与积分套餐宣传图 | 超值双福利</title>
+    <!-- 引入 Google Fonts 提升现代感 -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 (免费图标库) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(145deg, #0a0f1e 0%, #0c1225 100%);
+            font-family: 'Inter', sans-serif;
+            padding: 40px 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* 宣传主容器 */
+        .promo-container {
+            max-width: 1400px;
+            width: 100%;
+            background: radial-gradient(circle at 10% 20%, rgba(0, 40, 60, 0.4), rgba(2, 10, 22, 0.7));
+            border-radius: 56px;
+            padding: 32px 28px 48px 28px;
+            backdrop-filter: blur(2px);
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+        }
+
+        /* 头部区域 */
+        .hero {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(0, 230, 200, 0.18);
+            backdrop-filter: blur(4px);
+            padding: 6px 18px;
+            border-radius: 60px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #7efff0;
+            letter-spacing: 0.5px;
+            border: 1px solid rgba(0, 255, 255, 0.4);
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #FFFFFF 0%, #b3f0ff 80%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: -0.02em;
+            margin-bottom: 12px;
+        }
+
+        .subhead {
+            font-size: 1.1rem;
+            color: #a6c1ff;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.4;
+        }
+
+        .rule-bar {
+            background: rgba(15, 25, 45, 0.7);
+            border-radius: 60px;
+            padding: 10px 20px;
+            display: inline-flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #b9e2ff;
+            border: 1px solid rgba(72, 187, 255, 0.3);
+            backdrop-filter: blur(4px);
+        }
+
+        .rule-bar i {
+            color: #2ef7e0;
+            margin-right: 6px;
+        }
+
+        .rule-bar span {
+            margin: 0 4px;
+        }
+
+        /* 套餐网格 */
+        .section-title {
+            font-size: 1.7rem;
+            font-weight: 700;
+            margin: 40px 0 20px 0;
+            padding-left: 12px;
+            border-left: 5px solid #2ef7e0;
+            color: #eef5ff;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-title i {
+            color: #2ef7e0;
+            font-size: 1.6rem;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 28px;
+            margin-bottom: 40px;
+        }
+
+        /* 卡片通用样式 */
+        .price-card {
+            background: rgba(12, 20, 35, 0.75);
+            backdrop-filter: blur(12px);
+            border-radius: 32px;
+            padding: 24px 20px 28px;
+            transition: all 0.25s ease;
+            border: 1px solid rgba(46, 247, 224, 0.25);
+            box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .price-card:hover {
+            transform: translateY(-6px);
+            border-color: #2ef7e0;
+            box-shadow: 0 22px 35px -12px rgba(0, 255, 255, 0.2);
+            background: rgba(15, 25, 45, 0.85);
+        }
+
+        /* 特殊卡片高亮 (旗舰优选) */
+        .card-premium {
+            border: 1px solid #ffcd4a;
+            box-shadow: 0 0 18px rgba(255, 205, 74, 0.25);
+            position: relative;
+            overflow: hidden;
+        }
+        .card-premium::before {
+            content: "⭐ 旗舰优选";
+            position: absolute;
+            top: 18px;
+            right: -32px;
+            background: #ffcd4a;
+            color: #0a0f1e;
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 6px 42px;
+            transform: rotate(45deg);
+            width: 140px;
+            text-align: center;
+            letter-spacing: 1px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+
+        .card-header {
+            margin-bottom: 20px;
+        }
+
+        .plan-name {
+            font-size: 1.7rem;
+            font-weight: 800;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            font-size: 0.7rem;
+            background: #2c3e66;
+            padding: 4px 12px;
+            border-radius: 40px;
+            color: #c0e0ff;
+            font-weight: 500;
+        }
+
+        .price {
+            font-size: 2.6rem;
+            font-weight: 800;
+            color: #f0fcff;
+            margin: 12px 0 6px;
+            letter-spacing: -1px;
+        }
+        .price small {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #90b4ff;
+        }
+
+        .original-value {
+            font-size: 0.85rem;
+            color: #9bb5e0;
+            margin-bottom: 12px;
+            border-bottom: 1px dashed rgba(100, 200, 255, 0.3);
+            padding-bottom: 10px;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin: 16px 0 20px;
+            flex: 1;
+        }
+
+        .feature-list li {
+            margin-bottom: 12px;
+            font-size: 0.92rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            color: #d3e4ff;
+        }
+
+        .feature-list li i {
+            color: #2ef7e0;
+            font-size: 1rem;
+            margin-top: 2px;
+            min-width: 20px;
+        }
+
+        .highlight {
+            background: rgba(46, 247, 224, 0.12);
+            padding: 10px 12px;
+            border-radius: 20px;
+            margin: 16px 0 8px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #bbf0ff;
+            border-left: 3px solid #2ef7e0;
+        }
+
+        .badge-save {
+            background: #2a7f6e30;
+            color: #8effe0;
+            font-weight: 600;
+            font-size: 0.75rem;
+            padding: 4px 10px;
+            border-radius: 40px;
+            display: inline-block;
+            margin-top: 8px;
+        }
+
+        .btn-fake {
+            background: rgba(46, 247, 224, 0.15);
+            border: 1px solid #2ef7e0;
+            border-radius: 40px;
+            padding: 12px 0;
+            text-align: center;
+            font-weight: 700;
+            color: #cffff5;
+            margin-top: 18px;
+            transition: 0.2s;
+            font-size: 0.9rem;
+            cursor: default;
+            backdrop-filter: blur(2px);
+        }
+
+        .btn-fake i {
+            margin-right: 6px;
+            font-size: 0.8rem;
+        }
+
+        .btn-fake:hover {
+            background: rgba(46, 247, 224, 0.3);
+            color: white;
+        }
+
+        .footnote {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(46, 247, 224, 0.25);
+            font-size: 0.8rem;
+            color: #8aa7dd;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px;
+        }
+
+        .footnote i {
+            margin-right: 6px;
+            color: #2ef7e0;
+        }
+
+        @media (max-width: 780px) {
+            .promo-container {
+                padding: 20px 16px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .price {
+                font-size: 2rem;
+            }
+            .plan-name {
+                font-size: 1.4rem;
+            }
+            .section-title {
+                font-size: 1.4rem;
+            }
+            .rule-bar {
+                font-size: 0.75rem;
+                gap: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="promo-container">
+    <div class="hero">
+        <div class="badge"><i class="fas fa-submarine"></i> 深海算力·双倍增值</div>
+        <h1>潜艇AI · 会员&积分套餐</h1>
+        <div class="subhead">积分即返 · 会员时长叠加 · 高能性价比</div>
+        <div class="rule-bar">
+            <span><i class="fas fa-coins"></i> 1元 = 100积分</span>
+            <span><i class="fas fa-gift"></i> 赠送积分按标准核算</span>
+            <span><i class="fas fa-chart-line"></i> 所有积分可消费全站服务</span>
+        </div>
+    </div>
+
+    <!-- 会员基础套餐区域 -->
+    <div class="section-title">
+        <i class="fas fa-crown"></i> 
+        <span>会员基础套餐 · 日常刚需款</span>
+    </div>
+    <div class="cards-grid">
+        <!-- 月度会员 -->
+        <div class="price-card">
+            <div class="card-header">
+                <div class="plan-name">
+                    月度会员 <span class="tag">30天体验</span>
+                </div>
+                <div class="price">¥99 <small>/ 30天</small></div>
+                <div class="original-value">🎁 额外赠送 <strong>5000积分</strong> <span style="color:#9efff0;">(价值50元)</span></div>
+            </div>
+            <ul class="feature-list">
+                <li><i class="fas fa-check-circle"></i> 全额会员权益30天无限畅享</li>
+                <li><i class="fas fa-gem"></i> 赠送积分 <strong>5000</strong> (到账即用)</li>
+                <li><i class="fas fa-charging-station"></i> 总价值 ≈ ¥149，性价比拉满</li>
+                <li><i class="fas fa-rocket"></i> 适合短期体验/轻量使用</li>
+            </ul>
+            <div class="highlight">
+                <i class="fas fa-bolt"></i> 折合每日仅3.3元，额外送50元积分
+            </div>
+            <div class="btn-fake"><i class="fas fa-shopping-cart"></i> 立即开通 · 月享福利</div>
+        </div>
+
+        <!-- 年会员专属套餐 -->
+        <div class="price-card">
+            <div class="card-header">
+                <div class="plan-name">
+                    年会员 <span class="tag" style="background:#1f5e54;">🌟 超值首选</span>
+                </div>
+                <div class="price">¥999 <small>/ 12个月</small></div>
+                <div class="original-value">📅 折合 ¥83.25/月 · 比月度套餐省<strong>¥158.5</strong><br>🎁 额外赠送 <strong>60000积分</strong> (价值600元)</div>
+            </div>
+            <ul class="feature-list">
+                <li><i class="fas fa-infinity"></i> 全年会员权益不间断</li>
+                <li><i class="fas fa-gift"></i> 赠送60000积分 ≈ ¥600 消费金</li>
+                <li><i class="fas fa-chart-simple"></i> 总回馈价值高达 ¥1599+</li>
+                <li><i class="fas fa-user-astronaut"></i> 高频用户必选，覆盖大量额外服务</li>
+            </ul>
+            <div class="highlight">
+                <i class="fas fa-medal"></i> 日均仅2.74元，赠送积分可抵高级功能
+            </div>
+            <div class="btn-fake"><i class="fas fa-calendar-alt"></i> 开通年会员 · 尊享全年</div>
+        </div>
+    </div>
+
+    <!-- 积分优惠套餐 (积分+会员双重福利) -->
+    <div class="section-title">
+        <i class="fas fa-percent"></i>
+        <span>积分优惠套餐 · 买积分送会员时长</span>
+        <span style="font-size:0.85rem; margin-left:auto; background:#1a2a44; padding:4px 12px; border-radius:30px;"><i class="fas fa-hand-holding-usd"></i> 积分返还+会员叠加</span>
+    </div>
+    <div class="cards-grid">
+        <!-- 套餐1: 499元积分套餐 (纯积分高性价比) -->
+        <div class="price-card">
+            <div class="card-header">
+                <div class="plan-name">
+                    积分·轻享包 <span class="tag">纯积分优选</span>
+                </div>
+                <div class="price">¥499</div>
+                <div class="original-value">✨ 实际到账积分：<strong>55,000积分</strong> (折合550元)</div>
+            </div>
+            <ul class="feature-list">
+                <li><i class="fas fa-calculator"></i> 基础积分49,900 + 额外赠送5,100积分</li>
+                <li><i class="fas fa-chart-line"></i> 总价值 ¥550 > 支付额，净赚51元积分</li>
+                <li><i class="fas fa-user"></i> 不赠送会员，纯积分补充</li>
+                <li><i class="fas fa-battery-full"></i> 适合仅需积分、短期消费的用户</li>
+            </ul>
+            <div class="highlight">
+                <i class="fas fa-charging-station"></i> 每元可得110积分，效率最高积分包
+            </div>
+            <div class="btn-fake"><i class="fas fa-coins"></i> 补充积分 · 即买即用</div>
+        </div>
+
+        <!-- 套餐2: 1000元积分套餐 -->
+        <div class="price-card">
+            <div class="card-header">
+                <div class="plan-name">
+                    积分·进阶礼 <span class="tag">12%返还</span>
+                </div>
+                <div class="price">¥1000</div>
+                <div class="original-value">🎯 到账积分：<strong>112,000积分</strong> (折合1120元)<br>🎁 赠送 <strong>2个月会员</strong> (价值198元)</div>
+            </div>
+            <ul class="feature-list">
+                <li><i class="fas fa-percent"></i> 12%积分返还 → 多得12,000积分</li>
+                <li><i class="fas fa-calendar-week"></i> 获2个月会员权益，时长可累计</li>
+                <li><i class="fas fa-gem"></i> 总价值≥ ¥1318，超值32%回馈</li>
+                <li><i class="fas fa-users"></i> 适合中量积分+短期会员体验</li>
+            </ul>
+            <div class="highlight">
+                <i class="fas fa-clock"></i> 赠送会员+积分叠加，双重收益
+            </div>
+            <div class="btn-fake"><i class="fas fa-gift"></i> 囤积分 · 赠会员</div>
+        </div>
+
+        <!-- 套餐3: 2000元积分套餐 -->
+        <div class="price-card">
+            <div class="card-header">
+                <div class="plan-name">
+                    积分·尊享包 <span class="tag">15%返还</span>
+                </div>
+                <div class="price">¥2000</div>
+                <div class="original-value">⚡ 到账积分：<strong>230,000积分</strong> (折合2300元)<br>🎁 赠送 <strong>4个月会员</strong> (价值396元)</div>
+            </div>
+            <ul class="feature-list">
+                <li><i class="fas fa-chart-line"></i> 15%超高返还 → 多得30,000积分</li>
+                <li><i class="fas fa-meteor"></i> 额外4个月会员，权益持续升级</li>
+                <li><i class="fas fa-trophy"></i> 总价值高达¥2696，净赚¥696+</li>
+                <li><i class="fas fa-fire"></i> 高频消耗积分用户/中长期需求</li>
+            </ul>
+            <div class="highlight">
+                <i class="fas fa-chart-simple"></i> 适合重度AI使用者，积分自由
+            </div>
+            <div class="btn-fake"><i class="fas fa-rocket"></i> 高能囤货 · 收益巅峰</div>
+        </div>
+
+        <!-- 套餐4: 5000元旗舰优选套餐 -->
+        <div class="price-card card-premium">
+            <div class="card-header">
+                <div class="plan-name">
+                    旗舰·深海宝库 <span class="tag">15%返还+全年会员</span>
+                </div>
+                <div class="price">¥5000</div>
+                <div class="original-value">🌊 到账积分：<strong>575,000积分</strong> (折合5750元)<br>🎁 赠送 <strong>12个月会员</strong> (价值1188元)</div>
+            </div>
+            <ul class="feature-list">
+                <li><i class="fas fa-star-of-life"></i> 15%积分返还 → 多得75,000积分</li>
+                <li><i class="fas fa-calendar-check"></i> 送一整年会员 (价值1188元)，时长叠加</li>
+                <li><i class="fas fa-chart-line"></i> 总价值≈¥6938，整体回馈率38.8%</li>
+                <li><i class="fas fa-building"></i> 企业用户/核心个人一站式顶配</li>
+            </ul>
+            <div class="highlight">
+                <i class="fas fa-gem"></i> “积分消费+全年会员”一步到位，长期高频首选
+            </div>
+            <div class="btn-fake"><i class="fas fa-whale"></i> 旗舰优选 · 企业级尊享</div>
+        </div>
+    </div>
+
+    <!-- 额外说明：会员叠加及积分权益 -->
+    <div class="footnote">
+        <span><i class="fas fa-layer-group"></i> 积分套餐赠送会员可与基础套餐时长累计叠加，会员自动顺延</span>
+        <span><i class="fas fa-clock"></i> 积分实时到账，会员即刻生效</span>
+        <span><i class="fas fa-exchange-alt"></i> 所有赠送积分按 1元=100积分 换算，全场服务通用</span>
+        <span><i class="fas fa-chart-pie"></i> 年会员相比月度套餐省¥158.5，附赠积分价值600元</span>
+    </div>
+
+    <!-- 额外展示性价比参考/温馨提示 增加精致感 -->
+    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 28px;">
+        <div style="background: rgba(0,30,40,0.5); border-radius: 60px; padding: 6px 18px; font-size: 0.75rem; color: #a2d2ff;">
+            <i class="fas fa-robot"></i> 积分可用于AI推理、高级模型、专属数据等服务
+        </div>
+        <div style="background: rgba(0,30,40,0.5); border-radius: 60px; padding: 6px 18px; font-size: 0.75rem; color: #a2d2ff;">
+            <i class="fas fa-sync-alt"></i> 会员权益+积分双轨并行，效率最大化
+        </div>
+    </div>
+
+    <!-- 微装饰潜艇标识 -->
+    <div style="text-align: right; margin-top: 24px; opacity: 0.6; font-size: 12px; color:#5e8fc0;">
+        <i class="fas fa-submarine"></i> 潜艇AI · 深潜智能，积分当钱花
+    </div>
+</div>
+</body>
+</html>
